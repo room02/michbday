@@ -162,17 +162,51 @@ footer {
   100% {transform: translateY(100vh) rotate(360deg);}
 }
 
-/* --- Media Queries para móviles --- */
-@media (max-width: 600px) {
-  h1 { font-size: 2rem; }
-  p { font-size: 1rem; }
-  section.banner { font-size: 1rem; padding: 10px 15px; }
-  .countdown-item span { font-size: 1.5rem; }
-  .countdown-item .countdown-label { font-size: 0.8rem; }
-  header img { max-width: 90%; height: auto; }
-  .footer-image img { max-width: 80%; }
-  footer { font-size: 0.8rem; }
+/* --- Media Queries iPhone 15 --- */
+@media (max-width: 400px) {
+  /* Titular y subtítulos */
+  h1 {
+    font-size: 1.8rem;   /* más pequeño para caber en pantalla */
+  }
+  p {
+    font-size: 0.95rem;  /* subtítulos legibles */
+  }
+
+  /* Banners */
+  section.banner {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    max-width: 95%;      /* ocupa casi todo el ancho */
+  }
+
+  /* Countdown */
+  .countdown-box {
+    flex-wrap: wrap;      /* que los cuadros se acomoden en varias filas */
+    width: 95%;
+  }
+  .countdown-item span {
+    font-size: 1.4rem;    /* números más pequeños */
+  }
+  .countdown-item .countdown-label {
+    font-size: 0.75rem;   /* etiquetas más pequeñas */
+  }
+
+  /* Imágenes */
+  header img {
+    max-width: 90%;
+    height: auto;
+  }
+  .footer-image img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+  }
 }
+
   
 </style>
 </head>
@@ -281,5 +315,6 @@ setInterval(createConfetti, 400);
 </script>
 </body>
 </html>
+
 
 
