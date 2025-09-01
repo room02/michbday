@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title> 🎉 Cumple de Michelle</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'MiFuenteDigital';
+  src: url('fonts/DS-DIGI.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #42ade3, #44efbf);
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+}
+
+header {
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.countdown-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+  max-width: 380px;
+  margin: 0 auto 30px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 18px;
+  padding: 25px 18px;
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.2);
+  border: 2px solid #2a5298;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 5px 8px;
+  margin: 0 3px;
+}
+
+.countdown-item span {
+  font-family: 'MiFuenteDigital', 'Arial Black', Arial, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.countdown-item .countdown-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdown-separator {
+  font-family: 'MiFuenteDigital', 'Arial Black', Arial, sans-serif;
+  font-size: 3rem;
+  margin: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  border-radius: 0;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+section.banner {
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 500px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+section.banner:nth-child(1) { animation-delay: 0.3s; }
+section.banner:nth-child(2) { animation-delay: 0.6s; }
+section.banner:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+section.banner {
+  animation-name: slideLeft;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+
+footer {
+  padding: 20px;
+  font-size: 1.3rem; /* tamaño más grande */
+  color: #100b3d;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.footer-image {
+  text-align: center;        /* centra la imagen horizontalmente */
+  margin: 20px 0;            /* espacio arriba y abajo */
+}
+
+.footer-image img {
+  max-width: 300px;           /* no se salga del ancho de la página */
+  width: 80%;
+  height: auto;              /* mantiene proporciones */
+}
+
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  z-index: 1;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(100vh) rotate(360deg);}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎂 ¡Feliz Cumpleaños Mich! 🎉</h1>
+  <p>@micheladadosxx te invita a su fiesta</p>
+
+  <div class="countdown">
+    <div class="countdown-box">
+      <div class="countdown-item">
+        <span id="days">00</span>
+        <span class="countdown-label">Días</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-item">
+        <span id="hours">00</span>
+        <span class="countdown-label">Hr</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-item">
+        <span id="minutes">00</span>
+        <span class="countdown-label">Min</span>
+      </div>
+      <span class="countdown-separator">:</span>
+      <div class="countdown-item">
+        <span id="seconds">00</span>
+        <span class="countdown-label">Seg</span>
+      </div>
+    </div>
+  </div>
+
+  <img src="gifs/ine.gif" alt="Gif de cumpleaños" width="500">
+</header>
+
+<section class="banner">
+  <p><strong>📅 Fecha:</strong> sábado 6 de septiembre</p>
+</section>
+<section class="banner">
+  <p><strong>⏰ Hora:</strong> Desde la que quieran, hasta la que aguanten🤪🤙🏼 (no es cierto, de 8 pm - 1 am groseros)</p>
+</section>
+<section class="banner">
+  <p><strong>📍 Venue:</strong> Casa del Minion</p>
+  <a href="https://maps.app.goo.gl/jzY4F2BdVwLdXnJ79" target="_blank" 
+     style="color: #ffffff; text-decoration: underline; display: block; margin-top: 8px;">
+    Ver en Maps
+  </a>
+</section>
+
+
+<footer>
+  🍻Importante: BYOB🍻<br/>
+  ⚠️Habrá pipsa, cheve y pastel :D⚠️
+</footer>
+
+<div class="footer-image">
+  <img src="C:\Users\miche\OneDrive\Escritorio\michbday\img\eme.png" alt="Imagen final" />
+</div>
+
+<audio id="background-music" autoplay>
+  <source src="C:\Users\miche\OneDrive\Escritorio\michbday\audio\dk.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<script>
+const music = document.getElementById('background-music');
+music.volume = 0.2;  // volumen suave
+music.play().catch(() => {
+  document.body.addEventListener('click', () => music.play(), { once: true });
+});
+</script>
+</body>
+</html>
+
+<script>
+// Cuenta regresiva
+const eventDate = new Date("2025-09-06T21:00:00-06:00").getTime();
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+  if(diff <= 0) return;
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const seconds = Math.floor((diff % (1000*60)) / 1000);
+  document.getElementById("days").textContent = String(days).padStart(2,"0");
+  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+}, 1000);
+
+// Confeti animado
+function createConfetti() {
+  const confetti = document.createElement('div');
+  confetti.classList.add('confetti');
+  confetti.style.left = Math.random() * 100 + 'vw';
+  confetti.style.background = `hsl(${Math.random()*360}, 70%, 60%)`;
+  const size = 5 + Math.random()*10;
+  confetti.style.width = confetti.style.height = size + 'px';
+  confetti.style.animationDuration = (3 + Math.random()*2) + 's';
+  document.body.appendChild(confetti);
+  setTimeout(()=> confetti.remove(), 4000);
+}
+setInterval(createConfetti, 400);
+
+</script>
+</body>
+</html>
